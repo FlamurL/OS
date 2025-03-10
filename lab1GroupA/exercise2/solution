@@ -1,0 +1,716 @@
+
+231514@os2:~$ mkdir results
+231514@os2:~$ cd results
+231514@os2:~/results$ touch OS1.txt OS2.txt
+231514@os2:~/results$ ^[[200~wget https://courses.finki.ukim.mk/pluginfile.php/2                                                                                                                                                                                                                                             69875/question/questiontext/708202/2/982584/OS1.txt?time=1710500609977 -O OS1.tx                                                                                                                                                                                                                                             t
+-bash: $'\E[200~wget': command not found
+231514@os2:~/results$ wget https://courses.finki.ukim.mk/pluginfile.php/269875/q                                                                                                                                                                                                                                             uestion/questiontext/708202/2/982584/OS2.txt?time=1710500632665 -O OS2.txt
+--2025-03-10 01:53:30--  https://courses.finki.ukim.mk/pluginfile.php/269875/que                                                                                                                                                                                                                                             stion/questiontext/708202/2/982584/OS2.txt?time=1710500632665
+Resolving courses.finki.ukim.mk (courses.finki.ukim.mk)... 10.10.5.197
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443...                                                                                                                                                                                                                                              connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:53:30--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443...                                                                                                                                                                                                                                              connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.fink                                                                                                                                                                                                                                             i.ukim.mk%2Flogin%2Findex.php&gateway=true [following]
+--2025-03-10 01:53:30--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F                                                                                                                                                                                                                                             %2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true
+Resolving cas.finki.ukim.mk (cas.finki.ukim.mk)... 10.10.5.199
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connecte                                                                                                                                                                                                                                             d.
+HTTP request sent, awaiting response... 302 Found
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:53:30--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443...                                                                                                                                                                                                                                              connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.fink                                                                                                                                                                                                                                             i.ukim.mk%2Flogin%2Findex.php [following]
+--2025-03-10 01:53:30--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F                                                                                                                                                                                                                                             %2Fcourses.finki.ukim.mk%2Flogin%2Findex.php
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connecte                                                                                                                                                                                                                                             d.
+HTTP request sent, awaiting response... 200 OK
+Length: 5699 (5.6K) [text/html]
+Saving to: ‘OS2.txt’
+
+OS2.txt             100%[===================>]   5.57K  --.-KB/s    in 0s
+
+2025-03-10 01:53:30 (76.9 MB/s) - ‘OS2.txt’ saved [5699/5699]
+
+231514@os2:~/results$ ~wget https://courses.finki.ukim.mk/pluginfile.php/269875/                                                                                                                                                                                                                                             question/questiontext/708202/2/982584/OS1.txt?time=1710500609977
+-bash: ~wget: command not found
+231514@os2:~/results$ wget https://courses.finki.ukim.mk/pluginfile.php/269875/q                                                                                                                                                                                                                                             uestion/questiontext/708202/2/982584/OS1.txt?time=1710500609977
+--2025-03-10 01:54:45--  https://courses.finki.ukim.mk/pluginfile.php/269875/que                                                                                                                                                                                                                                             stion/questiontext/708202/2/982584/OS1.txt?time=1710500609977
+Resolving courses.finki.ukim.mk (courses.finki.ukim.mk)... 10.10.5.197
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443...                                                                                                                                                                                                                                              connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:54:45--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443...                                                                                                                                                                                                                                              connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.fink                                                                                                                                                                                                                                             i.ukim.mk%2Flogin%2Findex.php&gateway=true [following]
+--2025-03-10 01:54:45--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F                                                                                                                                                                                                                                             %2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true
+Resolving cas.finki.ukim.mk (cas.finki.ukim.mk)... 10.10.5.199
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connecte                                                                                                                                                                                                                                             d.
+HTTP request sent, awaiting response... 302 Found
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:54:45--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443...                                                                                                                                                                                                                                              connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.fink                                                                                                                                                                                                                                             i.ukim.mk%2Flogin%2Findex.php [following]
+--2025-03-10 01:54:45--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F                                                                                                                                                                                                                                             %2Fcourses.finki.ukim.mk%2Flogin%2Findex.php
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connecte                                                                                                                                                                                                                                             d.
+HTTP request sent, awaiting response... 200 OK
+Length: 5699 (5.6K) [text/html]
+Saving to: ‘OS1.txt?time=1710500609977’
+
+OS1.txt?time=171050 100%[===================>]   5.57K  --.-KB/s    in 0.001s
+
+2025-03-10 01:54:45 (10.5 MB/s) - ‘OS1.txt?time=1710500609977’ saved [5699/5699]
+
+231514@os2:~/results$ wget 200~ https://courses.finki.ukim.mk/pluginfile.php/269875/question/questiontext/708202/2/982584/OS2.txt?time=1710500632665
+--2025-03-10 01:55:53--  http://200~/
+Resolving 200~ (200~)... failed: Name or service not known.
+wget: unable to resolve host address ‘200~’
+--2025-03-10 01:55:53--  https://courses.finki.ukim.mk/pluginfile.php/269875/question/questiontext/708202/2/982584/OS2.txt?time=1710500632665
+Resolving courses.finki.ukim.mk (courses.finki.ukim.mk)... 10.10.5.197
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:55:53--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true [following]
+--2025-03-10 01:55:53--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true
+Resolving cas.finki.ukim.mk (cas.finki.ukim.mk)... 10.10.5.199
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:55:53--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php [following]
+--2025-03-10 01:55:53--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5699 (5.6K) [text/html]
+Saving to: ‘OS2.txt?time=1710500632665’
+
+OS2.txt?time=1710500632665                                                      100%[====================================================================================================================================================================================================>]   5.57K  --.-KB/s    in 0s
+
+2025-03-10 01:55:53 (115 MB/s) - ‘OS2.txt?time=1710500632665’ saved [5699/5699]
+
+FINISHED --2025-03-10 01:55:53--
+Total wall clock time: 0.2s
+Downloaded: 1 files, 5.6K in 0s (115 MB/s)
+231514@os2:~/results$ wget https://courses.finki.ukim.mk/pluginfile.php/269875/question/questiontext/708202/2/982584/OS1.txt?time=1710500609977 -O OS1.txt
+--2025-03-10 01:59:04--  https://courses.finki.ukim.mk/pluginfile.php/269875/question/questiontext/708202/2/982584/OS1.txt?time=1710500609977
+Resolving courses.finki.ukim.mk (courses.finki.ukim.mk)... 10.10.5.197
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:59:04--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true [following]
+--2025-03-10 01:59:04--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true
+Resolving cas.finki.ukim.mk (cas.finki.ukim.mk)... 10.10.5.199
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:59:05--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php [following]
+--2025-03-10 01:59:05--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5699 (5.6K) [text/html]
+Saving to: ‘OS1.txt’
+
+OS1.txt                                                                         100%[====================================================================================================================================================================================================>]   5.57K  --.-KB/s    in 0s
+
+2025-03-10 01:59:05 (169 MB/s) - ‘OS1.txt’ saved [5699/5699]
+
+231514@os2:~/results$ wget https://courses.finki.ukim.mk/pluginfile.php/269875/question/questiontext/708202/2/982584/OS2.txt?time=1710500632665 -O OS2.txt
+--2025-03-10 01:59:45--  https://courses.finki.ukim.mk/pluginfile.php/269875/question/questiontext/708202/2/982584/OS2.txt?time=1710500632665
+Resolving courses.finki.ukim.mk (courses.finki.ukim.mk)... 10.10.5.197
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:59:45--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true [following]
+--2025-03-10 01:59:45--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&gateway=true
+Resolving cas.finki.ukim.mk (cas.finki.ukim.mk)... 10.10.5.199
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://courses.finki.ukim.mk/login/index.php [following]
+--2025-03-10 01:59:45--  https://courses.finki.ukim.mk/login/index.php
+Connecting to courses.finki.ukim.mk (courses.finki.ukim.mk)|10.10.5.197|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php [following]
+--2025-03-10 01:59:45--  https://cas.finki.ukim.mk/cas/login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php
+Connecting to cas.finki.ukim.mk (cas.finki.ukim.mk)|10.10.5.199|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5699 (5.6K) [text/html]
+Saving to: ‘OS2.txt’
+
+OS2.txt                                                                         100%[====================================================================================================================================================================================================>]   5.57K  --.-KB/s    in 0s
+
+2025-03-10 01:59:45 (112 MB/s) - ‘OS2.txt’ saved [5699/5699]
+
+231514@os2:~/results$ cat OS1.txt
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+        <head>
+            <title>CAS &#8211; Central Authentication Service</title>
+
+
+
+
+                <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=11642DDB0EA6740DD5D502A243EA475A" />
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <link rel="icon" href="/cas/favicon.ico;jsessionid=11642DDB0EA6740DD5D502A243EA475A" type="image/x-icon" />
+        </head>
+        <body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+                                <a id="reset-password" href="https://www.finki.ukim.mk/studentlogin.reset" >
+                                        </a>
+            </div>
+            <div id="content" class="fl-screenNavigator-scroll-container">
+
+
+
+
+  <div class="box fl-panel" id="login">
+            <h1>Central Authentication Service (CAS) </h1>
+                        <form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=11642DDB0EA6740DD5D502A243EA475A?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php" method="post">
+
+
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+
+
+
+
+                                                <input id="username" name="username" class="required" tabindex="1" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+
+                    </div>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assword:</label>
+
+
+                                                <input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    </div>
+                    <div class="row check">
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox" />
+                        <label for="warn"><span class="accesskey">W</span>arn me before logging me into other sites.</label>
+                    </div>
+                    <div class="row btn-row">
+                                                <input type="hidden" name="lt" value="LT-678378-hHQtTgFsGPHnqHSaj4xJGUnkigdiI9" />
+                                                <input type="hidden" name="execution" value="e1s1" />
+                                                <input type="hidden" name="_eventId" value="submit" />
+
+                        <input class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="submit" />
+                        <input class="btn-reset" name="reset" accesskey="c" value="CLEAR" tabindex="5" type="reset" />
+                    </div>
+            </form>
+          </div>
+            <div id="sidebar">
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80">For security reasons, please Log Out and Exit your web browser when you are done accessing services that require authentication!</p>
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><p>For password reset, login problem or technical assistance, visit <a href="http://www.students.finki.ukim.mk" title="Services for Students of the FCSE">Services for Students of the FCSE</a>.</p><p>The Central Authentication Servis enables login to multiple web sites with a single input of your FCSE username and password. After your credentials are checked succesfully, you are given a ticket to use for login to all web sites that CAS. <b>Pay attention: the login ticked is held within your browsers temporary memory until you close all browser windows (or deliberately delete browsers privacy settings and session).</b></p><p>This service is to be used only by students and employees of the FCSE. The username for students is the dossier number (students from the FNSM have a dossier number in the form 12345 , and for students from the FEEIT in the form 123410).  </p></p>
+                <div id="list-languages" class="fl-panel">
+
+
+
+                  <h3>Languages:</h3>
+
+
+
+
+                                                <ul
+                                                        ><li class="first"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=en">English</a></li
+                            ><li class="last"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=mk">Macedonian</a></li
+                                                ></ul>
+
+
+                </div>
+            </div>
+
+
+
+</div>
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                        <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
+                    <div id="copyright">
+                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
+                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service 3.5.2</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=11642DDB0EA6740DD5D502A243EA475A"></script>
+    </body>
+</html>
+
+231514@os2:~/results$ cat OS2.txt
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+        <head>
+            <title>CAS &#8211; Central Authentication Service</title>
+
+
+
+
+                <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065" />
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <link rel="icon" href="/cas/favicon.ico;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065" type="image/x-icon" />
+        </head>
+        <body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+                                <a id="reset-password" href="https://www.finki.ukim.mk/studentlogin.reset" >
+                                        </a>
+            </div>
+            <div id="content" class="fl-screenNavigator-scroll-container">
+
+
+
+
+  <div class="box fl-panel" id="login">
+            <h1>Central Authentication Service (CAS) </h1>
+                        <form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php" method="post">
+
+
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+
+
+
+
+                                                <input id="username" name="username" class="required" tabindex="1" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+
+                    </div>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assword:</label>
+
+
+                                                <input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    </div>
+                    <div class="row check">
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox" />
+                        <label for="warn"><span class="accesskey">W</span>arn me before logging me into other sites.</label>
+                    </div>
+                    <div class="row btn-row">
+                                                <input type="hidden" name="lt" value="LT-678382-JiEz3pWl1z22AeIMMRHXSmVi92Emut" />
+                                                <input type="hidden" name="execution" value="e1s1" />
+                                                <input type="hidden" name="_eventId" value="submit" />
+
+                        <input class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="submit" />
+                        <input class="btn-reset" name="reset" accesskey="c" value="CLEAR" tabindex="5" type="reset" />
+                    </div>
+            </form>
+          </div>
+            <div id="sidebar">
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80">For security reasons, please Log Out and Exit your web browser when you are done accessing services that require authentication!</p>
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><p>For password reset, login problem or technical assistance, visit <a href="http://www.students.finki.ukim.mk" title="Services for Students of the FCSE">Services for Students of the FCSE</a>.</p><p>The Central Authentication Servis enables login to multiple web sites with a single input of your FCSE username and password. After your credentials are checked succesfully, you are given a ticket to use for login to all web sites that CAS. <b>Pay attention: the login ticked is held within your browsers temporary memory until you close all browser windows (or deliberately delete browsers privacy settings and session).</b></p><p>This service is to be used only by students and employees of the FCSE. The username for students is the dossier number (students from the FNSM have a dossier number in the form 12345 , and for students from the FEEIT in the form 123410).  </p></p>
+                <div id="list-languages" class="fl-panel">
+
+
+
+                  <h3>Languages:</h3>
+
+
+
+
+                                                <ul
+                                                        ><li class="first"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=en">English</a></li
+                            ><li class="last"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=mk">Macedonian</a></li
+                                                ></ul>
+
+
+                </div>
+            </div>
+
+
+
+</div>
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                        <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
+                    <div id="copyright">
+                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
+                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service 3.5.2</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065"></script>
+    </body>
+</html>
+
+231514@os2:~/results$ cat OS1.txt OS2.txt
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+        <head>
+            <title>CAS &#8211; Central Authentication Service</title>
+
+
+
+
+                <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=11642DDB0EA6740DD5D502A243EA475A" />
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <link rel="icon" href="/cas/favicon.ico;jsessionid=11642DDB0EA6740DD5D502A243EA475A" type="image/x-icon" />
+        </head>
+        <body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+                                <a id="reset-password" href="https://www.finki.ukim.mk/studentlogin.reset" >
+                                        </a>
+            </div>
+            <div id="content" class="fl-screenNavigator-scroll-container">
+
+
+
+
+  <div class="box fl-panel" id="login">
+            <h1>Central Authentication Service (CAS) </h1>
+                        <form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=11642DDB0EA6740DD5D502A243EA475A?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php" method="post">
+
+
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+
+
+
+
+                                                <input id="username" name="username" class="required" tabindex="1" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+
+                    </div>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assword:</label>
+
+
+                                                <input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    </div>
+                    <div class="row check">
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox" />
+                        <label for="warn"><span class="accesskey">W</span>arn me before logging me into other sites.</label>
+                    </div>
+                    <div class="row btn-row">
+                                                <input type="hidden" name="lt" value="LT-678378-hHQtTgFsGPHnqHSaj4xJGUnkigdiI9" />
+                                                <input type="hidden" name="execution" value="e1s1" />
+                                                <input type="hidden" name="_eventId" value="submit" />
+
+                        <input class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="submit" />
+                        <input class="btn-reset" name="reset" accesskey="c" value="CLEAR" tabindex="5" type="reset" />
+                    </div>
+            </form>
+          </div>
+            <div id="sidebar">
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80">For security reasons, please Log Out and Exit your web browser when you are done accessing services that require authentication!</p>
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><p>For password reset, login problem or technical assistance, visit <a href="http://www.students.finki.ukim.mk" title="Services for Students of the FCSE">Services for Students of the FCSE</a>.</p><p>The Central Authentication Servis enables login to multiple web sites with a single input of your FCSE username and password. After your credentials are checked succesfully, you are given a ticket to use for login to all web sites that CAS. <b>Pay attention: the login ticked is held within your browsers temporary memory until you close all browser windows (or deliberately delete browsers privacy settings and session).</b></p><p>This service is to be used only by students and employees of the FCSE. The username for students is the dossier number (students from the FNSM have a dossier number in the form 12345 , and for students from the FEEIT in the form 123410).  </p></p>
+                <div id="list-languages" class="fl-panel">
+
+
+
+                  <h3>Languages:</h3>
+
+
+
+
+                                                <ul
+                                                        ><li class="first"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=en">English</a></li
+                            ><li class="last"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=mk">Macedonian</a></li
+                                                ></ul>
+
+
+                </div>
+            </div>
+
+
+
+</div>
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                        <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
+                    <div id="copyright">
+                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
+                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service 3.5.2</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=11642DDB0EA6740DD5D502A243EA475A"></script>
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+        <head>
+            <title>CAS &#8211; Central Authentication Service</title>
+
+
+
+
+                <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065" />
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <link rel="icon" href="/cas/favicon.ico;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065" type="image/x-icon" />
+        </head>
+        <body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+                                <a id="reset-password" href="https://www.finki.ukim.mk/studentlogin.reset" >
+                                        </a>
+            </div>
+            <div id="content" class="fl-screenNavigator-scroll-container">
+
+
+
+
+  <div class="box fl-panel" id="login">
+            <h1>Central Authentication Service (CAS) </h1>
+                        <form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php" method="post">
+
+
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+
+
+
+
+                                                <input id="username" name="username" class="required" tabindex="1" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+
+                    </div>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assword:</label>
+
+
+                                                <input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    </div>
+                    <div class="row check">
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox" />
+                        <label for="warn"><span class="accesskey">W</span>arn me before logging me into other sites.</label>
+                    </div>
+                    <div class="row btn-row">
+                                                <input type="hidden" name="lt" value="LT-678382-JiEz3pWl1z22AeIMMRHXSmVi92Emut" />
+                                                <input type="hidden" name="execution" value="e1s1" />
+                                                <input type="hidden" name="_eventId" value="submit" />
+
+                        <input class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="submit" />
+                        <input class="btn-reset" name="reset" accesskey="c" value="CLEAR" tabindex="5" type="reset" />
+                    </div>
+            </form>
+          </div>
+            <div id="sidebar">
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80">For security reasons, please Log Out and Exit your web browser when you are done accessing services that require authentication!</p>
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><p>For password reset, login problem or technical assistance, visit <a href="http://www.students.finki.ukim.mk" title="Services for Students of the FCSE">Services for Students of the FCSE</a>.</p><p>The Central Authentication Servis enables login to multiple web sites with a single input of your FCSE username and password. After your credentials are checked succesfully, you are given a ticket to use for login to all web sites that CAS. <b>Pay attention: the login ticked is held within your browsers temporary memory until you close all browser windows (or deliberately delete browsers privacy settings and session).</b></p><p>This service is to be used only by students and employees of the FCSE. The username for students is the dossier number (students from the FNSM have a dossier number in the form 12345 , and for students from the FEEIT in the form 123410).  </p></p>
+                <div id="list-languages" class="fl-panel">
+
+
+
+                  <h3>Languages:</h3>
+
+
+
+
+                                                <ul
+                                                        ><li class="first"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=en">English</a></li
+                            ><li class="last"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=mk">Macedonian</a></li
+                                                ></ul>
+
+
+                </div>
+            </div>
+
+
+
+</div>
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                        <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
+                    <div id="copyright">
+                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
+                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service 3.5.2</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065"></script>
+    </body>
+</html>
+
+231514@os2:~/results$ cat OS1.txt OS2.txt > total.txt
+231514@os2:~/results$ mkdir results_2023
+231514@os2:~/results$ mv total.txt results_2023/
+231514@os2:~/results$ wc results.txt
+wc: results.txt: No such file or directory
+231514@os2:~/results$ wc total.txt
+wc: total.txt: No such file or directory
+231514@os2:~/results$ cd results_2023
+231514@os2:~/results/results_2023$ ls
+total.txt
+231514@os2:~/results/results_2023$ wc total.txt
+  220   782 11398 total.txt
+231514@os2:~/results/results_2023$ awk '$2 ~ /^2022/ {print $0}' OS1.txt OS2.txt
+awk: cannot open OS1.txt (No such file or directory)
+231514@os2:~/results/results_2023$ awk '$2 ~ /^2022/ {print $0}' total.txt
+231514@os2:~/results/results_2023$ ^C
+231514@os2:~/results/results_2023$ awk '$2 ~ /2022$/ {print $0}' total.txt
+231514@os2:~/results/results_2023$ awk '$2' total.txt
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+            <title>CAS &#8211; Central Authentication Service</title>
+                <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=11642DDB0EA6740DD5D502A243EA475A" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <link rel="icon" href="/cas/favicon.ico;jsessionid=11642DDB0EA6740DD5D502A243EA475A" type="image/x-icon" />
+        <body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+                                <a id="reset-password" href="https://www.finki.ukim.mk/studentlogin.reset" >
+            <div id="content" class="fl-screenNavigator-scroll-container">
+  <div class="box fl-panel" id="login">
+            <h1>Central Authentication Service (CAS) </h1>
+                        <form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=11642DDB0EA6740DD5D502A243EA475A?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php" method="post">
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+                                                <input id="username" name="username" class="required" tabindex="1" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assword:</label>
+                                                <input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    <div class="row check">
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox" />
+                        <label for="warn"><span class="accesskey">W</span>arn me before logging me into other sites.</label>
+                    <div class="row btn-row">
+                                                <input type="hidden" name="lt" value="LT-678378-hHQtTgFsGPHnqHSaj4xJGUnkigdiI9" />
+                                                <input type="hidden" name="execution" value="e1s1" />
+                                                <input type="hidden" name="_eventId" value="submit" />
+                        <input class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="submit" />
+                        <input class="btn-reset" name="reset" accesskey="c" value="CLEAR" tabindex="5" type="reset" />
+            <div id="sidebar">
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80">For security reasons, please Log Out and Exit your web browser when you are done accessing services that require authentication!</p>
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><p>For password reset, login problem or technical assistance, visit <a href="http://www.students.finki.ukim.mk" title="Services for Students of the FCSE">Services for Students of the FCSE</a>.</p><p>The Central Authentication Servis enables login to multiple web sites with a single input of your FCSE username and password. After your credentials are checked succesfully, you are given a ticket to use for login to all web sites that CAS. <b>Pay attention: the login ticked is held within your browsers temporary memory until you close all browser windows (or deliberately delete browsers privacy settings and session).</b></p><p>This service is to be used only by students and employees of the FCSE. The username for students is the dossier number (students from the FNSM have a dossier number in the form 12345 , and for students from the FEEIT in the form 123410).  </p></p>
+                <div id="list-languages" class="fl-panel">
+                                                        ><li class="first"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=en">English</a></li
+                            ><li class="last"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=mk">Macedonian</a></li
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                        <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
+                    <div id="copyright">
+                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
+                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service 3.5.2</a></p>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=11642DDB0EA6740DD5D502A243EA475A"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+            <title>CAS &#8211; Central Authentication Service</title>
+                <link type="text/css" rel="stylesheet" href="/cas/css/cas.css;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <link rel="icon" href="/cas/favicon.ico;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065" type="image/x-icon" />
+        <body id="cas" class="fl-theme-iphone">
+    <div class="flc-screenNavigator-view-container">
+        <div class="fl-screenNavigator-view">
+            <div id="header" class="flc-screenNavigator-navbar fl-navbar fl-table">
+                                <a id="reset-password" href="https://www.finki.ukim.mk/studentlogin.reset" >
+            <div id="content" class="fl-screenNavigator-scroll-container">
+  <div class="box fl-panel" id="login">
+            <h1>Central Authentication Service (CAS) </h1>
+                        <form id="fm1" class="fm-v clearfix" action="/cas/login;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php" method="post">
+                    <div class="row fl-controls-left">
+                        <label for="username" class="fl-label"><span class="accesskey">U</span>sername:</label>
+                                                <input id="username" name="username" class="required" tabindex="1" accesskey="n" type="text" value="" size="25" autocomplete="false"/>
+                    <div class="row fl-controls-left">
+                        <label for="password" class="fl-label"><span class="accesskey">P</span>assword:</label>
+                                                <input id="password" name="password" class="required" tabindex="2" accesskey="p" type="password" value="" size="25" autocomplete="off"/>
+                    <div class="row check">
+                        <input id="warn" name="warn" value="true" tabindex="3" accesskey="w" type="checkbox" />
+                        <label for="warn"><span class="accesskey">W</span>arn me before logging me into other sites.</label>
+                    <div class="row btn-row">
+                                                <input type="hidden" name="lt" value="LT-678382-JiEz3pWl1z22AeIMMRHXSmVi92Emut" />
+                                                <input type="hidden" name="execution" value="e1s1" />
+                                                <input type="hidden" name="_eventId" value="submit" />
+                        <input class="btn-submit" name="submit" accesskey="l" value="LOGIN" tabindex="4" type="submit" />
+                        <input class="btn-reset" name="reset" accesskey="c" value="CLEAR" tabindex="5" type="reset" />
+            <div id="sidebar">
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80">For security reasons, please Log Out and Exit your web browser when you are done accessing services that require authentication!</p>
+                <p class="fl-panel fl-note fl-bevel-white fl-font-size-80"><p>For password reset, login problem or technical assistance, visit <a href="http://www.students.finki.ukim.mk" title="Services for Students of the FCSE">Services for Students of the FCSE</a>.</p><p>The Central Authentication Servis enables login to multiple web sites with a single input of your FCSE username and password. After your credentials are checked succesfully, you are given a ticket to use for login to all web sites that CAS. <b>Pay attention: the login ticked is held within your browsers temporary memory until you close all browser windows (or deliberately delete browsers privacy settings and session).</b></p><p>This service is to be used only by students and employees of the FCSE. The username for students is the dossier number (students from the FNSM have a dossier number in the form 12345 , and for students from the FEEIT in the form 123410).  </p></p>
+                <div id="list-languages" class="fl-panel">
+                                                        ><li class="first"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=en">English</a></li
+                            ><li class="last"><a href="login?service=https%3A%2F%2Fcourses.finki.ukim.mk%2Flogin%2Findex.php&locale=mk">Macedonian</a></li
+                <div id="footer" class="fl-panel fl-note fl-bevel-white fl-font-size-80">
+                        <a id="jasig" href="http://www.jasig.org" title="go to Jasig home page"></a>
+                    <div id="copyright">
+                        <p>Copyright &copy; 2005 - 2012 Jasig, Inc. All rights reserved.</p>
+                        <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service 3.5.2</a></p>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/cas/js/cas.js;jsessionid=0E2FCA52180229D0270C6ADDE6B4A065"></script>
+231514@os2:~/results/results_2023$ cd ..
+231514@os2:~/results$ awk '{ if ($4 > 50 $$ $2 ~ /2023/) print $0 }' OS1.txt OS2.txt
+231514@os2:~/results$ ^[[200~grep "14.03.2024" OS1.txt OS2.txt | grep "in_progress" | wc -l
+-bash: $'\E[200~grep': command not found
+0
+231514@os2:~/results$ grep "14.03.2024" OS1.txt OS2.txt | grep "in_progress" | wc -l
+0
+231514@os2:~/results$

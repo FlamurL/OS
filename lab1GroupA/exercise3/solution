@@ -1,0 +1,37 @@
+nano script.sh
+
+
+if [ $# -eq 0 ]; then
+        echo "No input provided."
+        exit 1
+fi
+
+total_seconds=0
+count=0
+
+for i in {1..3}; do
+        if [ $i -le $# ]; then
+                total_seconds=$((total_seconds + ${!i} * 60 ))
+                count=$((count+1))
+        fi
+done
+
+if [ $count -gt 0 ]; then
+    average=$((total_seconds / count))
+    echo "Average execution time: $average"
+else
+    echo "Not enough data to calculate average."
+fi
+
+# Print the count of executions
+echo "Count of executions: $#"
+
+# Check if the number of executions is greater than or equal to 5
+if [ $# -ge 5 ]; then
+    echo "The testing is done"
+else
+    echo "More testing is needed"
+fi
+
+231514@os2:~$ chmod +x script.sh
+231514@os2:~$ ./script.sh 5 7 15 8 22 6
