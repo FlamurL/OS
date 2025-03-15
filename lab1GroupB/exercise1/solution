@@ -1,0 +1,40 @@
+1.
+ mkdir directory001
+
+ cd directory001
+
+ touch file123
+
+
+2.
+man cat
+
+
+
+
+
+3.
+chmod ug+rw,o-rwx directory001/file123
+
+
+
+4.
+chmod u=rw,g=rw,o= directory001/file123
+
+
+
+5. 
+who
+
+
+
+6.
+mkdir directory002
+cp directory001/file123 directory002/file234
+
+
+
+
+7.
+rm -r directory001
+

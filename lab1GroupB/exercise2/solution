@@ -1,0 +1,50 @@
+1.
+ mkdir results
+
+ cd results 
+
+ touch OS1.csv OS2.csv
+
+
+2.
+- nano OS1.csv
+paste the data from the link and save it using CTRL^X+Y
+
+- nano OS2.csv
+paste the data from the link and save it using CTRL^X+Y
+
+
+3.
+cat OS1.csv
+cat OS2.csv
+cat OS2.csv OS1.csv
+
+
+
+
+
+4.
+cat OS1.csv OS2.csv >> total.txt
+
+
+5.
+ mkdir results/results_2023
+ mv total.txt results/results_2023/
+
+
+
+6. 
+wc results/results_2023/total.txt
+
+
+7.
+cat results/results_2023/total.txt | awk '$1 ~ /23/'
+
+
+
+8.
+cat results/results_2023/total.txt | awk '$1 ~ /21/ &&  $5 ~/^submitted/ {print $1, $2, $3; }'
+
+
+9.
+awk '$4=="groupA" && $3 < "30:00"' results/results_2023/total.txt | wc -l

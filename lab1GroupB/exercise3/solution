@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+
+if [ $# -eq 0 ]; then
+
+    echo "Insert name of file!"
+
+    exit 1
+
+fi
+
+
+
+if [ $# -gt 1 ]; then
+
+    echo "Too many input arguments"
+
+    exit 1
+
+fi
+
+
+
+output_file="$1"
+
+
+
+for file in *.txt; do
+
+    if [ -r "$file" ] && [ ! -w "$file" ] && [ ! -x "$file" ]; then
+
+        cat "$file" >> "$output_file"
+
+        echo "" >> "$output_file"
+
+    fi
+
+done
+
