@@ -1,0 +1,137 @@
+1. Create Volumes:
+First, define two volumes in your docker-compose.yml:
+
+yaml
+
+volumes:
+  temperature:
+  temperaturelevel:
+
+
+2.
+
+yaml
+
+services:
+  temperatureSensor:
+    volumes:
+      - temperature:/path/to/temperature.txt
+  temperatureMonitor:
+    volumes:
+      - temperaturelevel:/path/to/temperaturelevel.txt
+
+
+
+
+
+
+
+      3.In your docker-compose.yml, define a network using the bridge driver:
+
+yaml
+
+networks:
+  temperature-level-network:
+    driver: bridge
+
+
+Then, connect your containers to this network:
+
+yaml
+
+services:
+  temperatureSensor:
+    networks:
+      - temperature-level-network
+  temperatureMonitor:
+    networks:
+      - temperature-level-network
+
+
+
+
+    4.Create the environment variables for the temperature levels in Docker Compose for each service:
+
+yaml
+
+services:
+  temperatureSensor:
+    environment:
+      - LOW_TEMPERATURE=10
+      - MEDIUM_TEMPERATURE=25
+      - HIGH_TEMPERATURE=35
+  temperatureMonitor:
+    environment:
+      - LOW_TEMPERATURE=10
+      - MEDIUM_TEMPERATURE=25
+      - HIGH_TEMPERATURE=35
+
+
+
+
+
+      5.In your Java code, WE need to fetch the values of the environment variables
+
+
+Java
+
+String lowTemp = System.getenv("LOW_TEMPERATURE");
+String mediumTemp = System.getenv("MEDIUM_TEMPERATURE");
+String highTemp = System.getenv("HIGH_TEMPERATURE");
+
+
+
+6. START DOCKER Compose
+
+bash
+
+docker-compose up
+
+
+
+7.
+
+bash 
+
+docker volume inspect temperature
+docker volume inspect temperaturelevel
+
+
+
+
+8.
+
+bash
+
+docker network inspect temperature-level-network
+
+
+
+
+
+9.
+
+bash
+
+docker ps
+
+
+
+
+10.
+
+bash
+
+docker exec -it <container_name> printenv
+
+
+
+
+11.
+
+bash
+
+docker-compose down
+docker-compose up -d
+
+docker-compose down

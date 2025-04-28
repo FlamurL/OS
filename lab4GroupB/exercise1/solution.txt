@@ -1,0 +1,310 @@
+- Step 1:
+
+docker run -it debian:11-slim bash
+
+
+
+apt update
+
+
+
+apt install nginx -y
+
+
+
+exit
+
+
+
+CONTAINER ID   IMAGE            COMMAND   CREATED         STATUS                      PORTS     NAMES
+
+
+
+d0141087f789   debian:11-slim   "bash"    2 minutes ago   Exited (0) 13 seconds ago             admiring_sanderson
+
+
+
+- Step 2:
+
+
+
+docker run -d --name nginx-product-host-i-container -p 8080:80 nginx-product-host-i
+
+
+
+- Step 3:
+
+
+
+echo 'FROM debian:11-slim
+
+
+
+RUN apt update && apt install -y nginx
+
+
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
+
+' > Dockerfile
+
+
+
+
+
+
+
+docker build -t nginx-product-host .
+
+
+
+- Step 4:
+
+
+
+docker run -d --name nginx-product-host-container -p 8081:80 nginx-product-host
+
+
+
+docker ps
+
+
+
+# You should see 0.0.0.0:8081->80/tcp.
+
+
+
+- Step 5: # First, make sure you have products.txt locally:
+
+
+
+echo -e "Fridge;\$600;5\nTV;\$1500;6\nMicrowave;\$200;10" > products.txt
+
+
+
+#Now copy into containers:
+
+
+
+docker cp products.txt nginx-product-host-i-container:/var/www/html/products.txt
+
+
+
+docker cp products.txt nginx-product-host-container:/var/www/html/products.txt
+
+
+
+
+
+- Step 6: # Test container 1
+
+
+
+curl -i http://localhost:8080/products.txt
+
+
+
+# Test container 2
+
+
+
+curl -i http://localhost:8081/products.txt
+
+
+
+
+
+- Step 7: #  Stop and remove both containers
+
+
+
+docker stop nginx-product-host-i-container nginx-product-host-container
+
+
+
+docker rm nginx-product-host-i-container nginx-product-host-container
+
+
+
+
+
+- Step 8: # Create html folder and copy products.txt into it
+
+
+
+mkdir html
+
+
+
+cp products.txt html/
+
+
+
+
+
+- Step 9: # Start nginx-product-host-container with volume mapping
+
+
+
+docker run -d --name nginx-product-host-container -p 8081:80 -v $(pwd)/html:/var/www/html nginx-product-host
+
+
+
+
+
+- Step 10: # Test again:
+
+
+
+curl -i http://localhost:8081/products.txt
+
+
+
+# You should get HTTP 200 OK
+
+
+
+- Step 11: # First save your Java code: The one that we have above at ProductsManagement.java
+
+
+
+nano ProductsManagement.java
+
+
+
+# Paste the code you gave.
+
+
+
+# Create a Dockerfile for Java app:
+
+
+
+echo 'FROM openjdk:11
+
+
+
+WORKDIR /app
+
+
+
+COPY ProductsManagement.java .
+
+
+
+RUN javac ProductsManagement.java
+
+
+
+CMD ["java", "ProductsManagement"]
+
+
+
+' > Dockerfile
+
+
+
+
+
+- Step 12: # Build image products-viewer
+
+
+
+docker build -t products-viewer .
+
+
+
+
+
+- Step 13: #Start container with volume mapping
+
+
+
+docker run -d --name products-viewer-container -v $(pwd)/html:/var/www/html products-viewer
+
+
+
+
+
+- Step 14: # Verify
+
+
+
+docker logs products-viewer-container
+
+
+
+
+
+- Step 15:
+
+# Your original Java code was:
+
+
+
+String path = "/var/www/html/products.txt";
+
+
+
+# You need to replace that line with:
+
+
+
+String path = System.getenv("PRODUCT_FILE_PATH");
+
+
+
+if (path == null) {
+
+
+
+    path = "/var/www/html/products.txt"; // default if env variable is not set
+
+
+
+}
+
+
+
+
+
+- Step 16: # Rebuild and rerun with -e for env variable
+
+# First stop and remove old container:
+
+docker stop products-viewer-container
+
+docker rm products-viewer-container
+
+
+
+# Rebuild image:
+
+
+
+docker build -t products-viewer .
+
+
+
+# Run again with env var:
+
+
+
+docker run -d --name products-viewer-container -v $(pwd)/html:/var/www/html -e PRODUCT_FILE_PATH=/var/www/html/products.txt products-viewer
+
+
+
+
+
+- Step 17: # Verify again
+
+
+
+docker logs products-viewer-container
+
+
+
+
+

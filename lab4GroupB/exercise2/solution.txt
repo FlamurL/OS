@@ -1,0 +1,278 @@
+mkdir -p ServerRoomTemperature/TemperatureSensor
+
+
+
+mkdir -p ServerRoomTemperature/TemperatureMonitor
+
+
+
+mkdir -p ServerRoomTemperature/data
+
+
+
+cd ServerRoomTemperature
+
+
+
+
+
+
+
+# Create the Java files
+
+
+
+cd TemperatureSensor
+
+nano TemperatureSensor.java
+
+1. TemperatureSensor.java
+
+
+
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+import java.util.Random;
+
+
+
+public class TemperatureSensor {
+
+    public static void main(String[] args) {
+
+        Random random = new Random();
+
+        while (true) {
+
+            try {
+
+                FileWriter writer = new FileWriter("/data/temperature.txt", false); // overwrite
+
+                for (int i = 0; i < 5; i++) {
+
+                    int temp = 5 + random.nextInt(46); // random number between 5 and 50
+
+                    writer.write(temp + "\n");
+
+                }
+
+                writer.close();
+
+                System.out.println("Written 5 new temperature values.");
+
+                Thread.sleep(30000); // 30 seconds
+
+            } catch (IOException | InterruptedException e) {
+
+                e.printStackTrace();
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+# Now do the same for TemperatureMonitor.java:
+
+
+
+cd ../TemperatureMonitor
+
+nano TemperatureMonitor.java
+
+
+
+2. TemperatureMonitor.java
+
+import java.io.*;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+
+
+public class TemperatureMonitor {
+
+    public static void main(String[] args) {
+
+        while (true) {
+
+            try {
+
+                List<Integer> temperatures = new ArrayList<>();
+
+                BufferedReader reader = new BufferedReader(new FileReader("/data/temperature.txt"));
+
+                String line;
+
+                while ((line = reader.readLine()) != null) {
+
+                    temperatures.add(Integer.parseInt(line.trim()));
+
+                }
+
+                reader.close();
+
+
+
+                if (!temperatures.isEmpty()) {
+
+                    double average = temperatures.stream().mapToInt(Integer::intValue).average().orElse(0);
+
+                    String level;
+
+                    if (average < 19) {
+
+                        level = "Low";
+
+                    } else if (average <= 35) {
+
+                        level = "Medium";
+
+                    } else {
+
+                        level = "High";
+
+                    }
+
+                    FileWriter writer = new FileWriter("/data/temperaturelevel.txt", false); // overwrite
+
+                    writer.write(level + "\n");
+
+                    writer.close();
+
+                    System.out.println("Temperature level written: " + level);
+
+                }
+
+                Thread.sleep(60000); // 60 seconds
+
+            } catch (IOException | InterruptedException e) {
+
+                e.printStackTrace();
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+# Next Step:
+
+cd ..
+
+cd TemperatureSensor
+
+# Create the Docker File for TemperatureSensor:
+
+nano Dockerfile
+
+# Paste:
+
+FROM openjdk:17-slim
+
+WORKDIR /app
+
+COPY TemperatureSensor.java .
+
+RUN javac TemperatureSensor.java
+
+CMD ["java", "TemperatureSensor"]
+
+
+
+# Now go back to ServerRoomTemperature root:
+
+cd ..
+
+
+
+For TemperatureMonitor:
+
+cd TemperatureMonitor
+
+nano Dockerfile
+
+# Paste:
+
+FROM openjdk:17-slim
+
+WORKDIR /app
+
+COPY TemperatureMonitor.java .
+
+RUN javac TemperatureMonitor.java
+
+CMD ["java", "TemperatureMonitor"]
+
+
+
+# Create docker-compose.yml
+
+cd ..
+
+nano docker-compose.yml
+
+# Paste:
+
+version: '3'
+
+
+
+services:
+
+  temperaturesensor:
+
+    build:
+
+      context: ./TemperatureSensor
+
+      dockerfile: Dockerfile
+
+    volumes:
+
+      - ./data:/data
+
+
+
+  temperaturemonitor:
+
+    build:
+
+      context: ./TemperatureMonitor
+
+      dockerfile: Dockerfile
+
+    volumes:
+
+      - ./data:/data
+
+
+
+# Now you are ready to build and run everything:
+
+docker-compose up --build -d
+
+
+
+# To stop everything at the end:
+
+docker-compose down
+
