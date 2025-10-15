@@ -1,0 +1,5 @@
+Extract errors From a file.csv file, print all lines containing "ERROR".
+Find column values From a CSV file (file.csv), print only the second and fourth columns.
+Average numbers Given a file file.csv, print their average time (3rd column).
+Replace text From file.csv every notsubmitted, replace the `` with a space.
+Filter dates From file.csv, print all lines that start with "21".

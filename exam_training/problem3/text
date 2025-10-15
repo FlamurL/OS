@@ -1,0 +1,4 @@
+Top usernames From a csv file, find the most common group.
+Line count Write a script that counts how many lines in a file contain the numbers 22.
+Sort unique From a file, print the unique third column sorted by highest to lowest
+Redirect output Write a script that filters "error" logs from file.csv and saves them into errors.log.

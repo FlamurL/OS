@@ -1,0 +1,23 @@
+Task: Networking + Synchronization Exam June 2025: TCP Client with Communication to Two Synchronized Servers
+(35 points)
+
+Implement a client that will establish a "TCP connection" with two servers that are listening on the IP address "192.168.88.10",
+one on port "7771" and the other on port "7772".
+The client must connect to both servers and send a message in the format: "hello:IndexNumber"
+(e.g., hello:111111, where 111111 is your student index number).
+
+If the login is successful, each server will respond with a message in the format: "loggedin:IndexNumber"
+After this, the client continues communication.
+
+To the first server (7771), the client must send: "sendNumber:IndexNumber"
+The server will then respond with: "Number:X"
+(e.g., Number:71), and the client must send back the same number (in this example, 71).
+
+After this step, both servers will start alternately and synchronously sending messages of the type: "increment:X"
+or "decrement:X"
+The client must always update the current number accordingly by increasing or decreasing it based on the message received.
+These messages can come from either of the two servers, and the communication must be parallel and synchronized, until one of the servers sends the message:
+"STOP"
+Once the client receives the STOP message from one of the servers, it must send the final value of the number back to the first server (7771).
+The server will then respond with "true" if the number is correct or "false" if it is not.
+All messages must end with a newline character (\n).

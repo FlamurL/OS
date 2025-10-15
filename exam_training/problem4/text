@@ -1,0 +1,11 @@
+Usage & validation
+Write a script that takes two arguments:
+
+a status (INFO, ERROR, DEBUG)
+
+a month (format YYYY-MM)
+The script should:
+
+print how many log lines have that status in that month
+
+validate arguments and print usage if wrong

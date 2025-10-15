@@ -1,0 +1,17 @@
+1. Unique Words in a File
+
+Input: words.txt
+
+apple
+banana
+apple
+orange
+banana
+apple
+
+
+Task:
+
+Print all unique words alphabetically.
+
+Print the frequency of each word, sorted by count (highest first).

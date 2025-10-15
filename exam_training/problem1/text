@@ -1,0 +1,5 @@
+Argument check
+Write a script that prints "Usage: script.sh <filename>" if no argument is given. If a filename is provided, check if it exists and print "File exists" or "File not found".
+
+Counting arguments
+Write a script that prints how many arguments were passed and then prints each argument on a new line.

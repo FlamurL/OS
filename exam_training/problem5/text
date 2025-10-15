@@ -1,0 +1,9 @@
+Student scores
+Given a CSV with student scores:
+
+Name,Math,Science,English
+Alice,80,90,70
+Bob,60,75,85
+
+
+Write a script that prints the average per subject.
